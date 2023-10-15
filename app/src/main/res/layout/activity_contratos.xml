@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityContratos"
+    android:background="@drawable/ventaalma">
+
+    <TextView
+        android:id="@+id/tvTituloPaginaContratos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/tv_tituloContratos"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etFechaInicial"
+        android:layout_width="254dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="30dp"
+        android:hint="Fecha de Inicio(ddmmyy)"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTituloPaginaContratos" />
+
+
+    <EditText
+        android:id="@+id/etFechaFinal"
+        android:layout_width="254dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="15dp"
+        android:hint="Fecha del Final (ddmmyy)"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etFechaInicial" />
+
+    <Spinner
+        android:id="@+id/etIdInquilino"
+        android:layout_width="254dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="15dp"
+        android:hint="Apellido"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etFechaFinal" />
+
+    <Spinner
+        android:id="@+id/etInMueble"
+        android:layout_width="254dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:hint="Numero Telefonico"
+        android:inputType="phone"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etIdInquilino" />
+
+    <EditText
+        android:id="@+id/etobservacion"
+        android:layout_width="254dp"
+        android:layout_height="60dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:hint="Obserciones"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etInMueble"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="40dp"/>
+
+    <TextView
+        android:id="@+id/tvMensajeContrato"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="160dp"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etInMueble"
+        tools:text="Mensaje" />
+
+    <Button
+        android:id="@+id/btnGuardarContrato"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_Guardar"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etobservacion"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="5dp"/>
+
+    <Button
+        android:id="@+id/btnListarContrato"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_Listar"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@id/btnGuardarContrato"
+        app:layout_constraintTop_toBottomOf="@id/etobservacion"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="5dp"/>
+
+    <Button
+        android:id="@+id/btnActualizarContrato"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/btn_Actualizar"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@id/btnListarContrato"
+        app:layout_constraintTop_toBottomOf="@id/etobservacion" />
+
+    <Button
+        android:id="@+id/btnEliminarContrato"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/btn_Eliminar"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnActualizarContrato"
+        app:layout_constraintTop_toBottomOf="@id/etobservacion" />
+
+
+    <Button
+        android:id="@+id/btnRegresarInquilinos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:onClick="salir"
+        android:text="@string/btn_regresar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityInMuebles"
+    android:background="@drawable/apartamentos">
+
+    <TextView
+        android:id="@+id/tvTituloPaginaInmuebles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="INMUEBLES"
+        android:textSize="34sp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etTipoInmueble"
+        android:layout_width="160dp"
+        android:layout_height="48dp"
+        android:hint="Tipo Inmueble"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTituloPaginaInmuebles"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="40dp"/>
+
+    <EditText
+        android:id="@+id/etDireccionInmueble"
+        android:layout_width="160dp"
+        android:layout_height="48dp"
+        android:hint="Direccion"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etTipoInmueble"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="40dp"/>
+
+    <ImageView
+        android:id="@+id/ivInmuebles"
+        android:layout_width="300dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etDireccionInmueble"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/btnGuardarInmueble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_Guardar"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivInmuebles"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="5dp"/>
+
+    <Button
+        android:id="@+id/btnListarInmueble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_Listar"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@id/btnGuardarInmueble"
+        app:layout_constraintTop_toBottomOf="@id/ivInmuebles"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="5dp"/>
+
+    <Button
+        android:id="@+id/btnActualizarInmueble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_Actualizar"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/ivInmuebles"
+        app:layout_constraintStart_toEndOf="@id/btnListarInmueble"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="5dp"/>
+
+    <Button
+        android:id="@+id/btnEliminarInmueble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/btn_Eliminar"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnActualizarInmueble"
+        app:layout_constraintTop_toBottomOf="@id/ivInmuebles" />
+
+    <TextView
+        android:id="@+id/tvMensajeInmueble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/ivInmuebles"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Mensaje"
+        android:textSize="25sp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="80dp"/>
+
+
+    <Button
+        android:id="@+id/btnRegresarInmuebles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:onClick="salir"
+        android:text="@string/btn_regresar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

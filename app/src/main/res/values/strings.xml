@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">SegundoParcial</string>
+    <string name="btn_Inquilinos">Inquilinos</string>
+    <string name="btn_Inmuebles">Inmuebles</string>
+    <string name="btn_Contratos">Contratos</string>
+    <string name="btn_regresar">Regresar</string>
+    <string name="tv_tituloPrincipal">ARRIENDO DE INMUEBLES</string>
+    <string name="tv_tituloInquilinos">INQUILINOS</string>
+    <string name="tv_tituloInmuebles">INMUEBLES</string>
+    <string name="tv_tituloContratos">CONTRATOS</string>
+    <string name="btn_Guardar">Guardar</string>
+    <string name="btn_Actualizar">Actualizar</string>
+    <string name="btn_Listar">Listar</string>
+    <string name="btn_Eliminar">Eliminar</string>
+</resources>

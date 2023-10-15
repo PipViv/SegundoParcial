@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityInquilinos"
+    android:background="@drawable/gente">
+
+
+
+    <TextView
+        android:id="@+id/tvTituloPaginaInquilinos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/tv_tituloInquilinos"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <EditText
+        android:id="@+id/etCodigoInquilino"
+        android:layout_width="160dp"
+        android:layout_height="48dp"
+        android:hint="Codigo Inquilino"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTituloPaginaInquilinos"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="40dp"/>
+
+    <EditText
+        android:id="@+id/etNombreInquilino"
+        android:layout_width="200dp"
+        android:layout_height="48dp"
+        android:hint="Nombre"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etCodigoInquilino"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="40dp"/>
+
+    <EditText
+        android:id="@+id/etApellidoInquilino"
+        android:layout_width="200dp"
+        android:layout_height="48dp"
+        android:hint="Apellido"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etNombreInquilino"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="40dp"/>
+
+    <EditText
+        android:id="@+id/etNumTelefonoInquilino"
+        android:layout_width="200dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:inputType="phone"
+        android:hint="Numero Telefonico"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etApellidoInquilino"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="40dp"/>
+
+    <EditText
+        android:id="@+id/etEmailInquilino"
+        android:layout_width="260dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:hint="Correo Electronico"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etNumTelefonoInquilino"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="40dp"/>
+
+    <TextView
+        android:id="@+id/tvMensajeInquilino"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/etEmailInquilino"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Mensaje"
+        android:textSize="25sp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="80dp"/>
+
+    <Button
+        android:id="@+id/btnGuardarInquilino"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_Guardar"
+        android:onClick="insertarInquilinoDTO"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etEmailInquilino"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="5dp"/>
+
+    <Button
+        android:id="@+id/btnListarInquilino"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_Listar"
+        android:onClick="listarInquilinoDTO"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@id/btnGuardarInquilino"
+        app:layout_constraintTop_toBottomOf="@id/etEmailInquilino"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="5dp"/>
+
+    <Button
+        android:id="@+id/btnActualizarInquilino"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/btn_Actualizar"
+        android:onClick="actualizarInquilinoDTO"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@id/btnListarInquilino"
+        app:layout_constraintTop_toBottomOf="@id/etEmailInquilino" />
+
+    <Button
+        android:id="@+id/btnEliminarInquilino"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/btn_Eliminar"
+        android:onClick="eliminarInquilinoDTO"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnActualizarInquilino"
+        app:layout_constraintTop_toBottomOf="@id/etEmailInquilino" />
+
+
+    <Button
+        android:id="@+id/btnRegresarInquilinos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:onClick="salir"
+        android:text="@string/btn_regresar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
